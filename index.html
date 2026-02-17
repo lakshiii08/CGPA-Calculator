@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 CGPA forge · dark mode · sem1 & sem2 marks</title>
+    <title>🌙 CGPA · NEXUS dark</title>
+    <!-- Font Awesome 6 (free) for creative icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,237 +15,310 @@
         }
 
         body {
-            background: radial-gradient(circle at 10% 20%, #1b2d3a, #0a1720);
+            background: #0b1219;
+            background-image: radial-gradient(circle at 25% 30%, #1e3b4f 0%, #071016 95%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 1.5rem;
+            transition: all 0.2s;
         }
 
-        /* main card – sleek dark glass */
-        .cgpa-vault {
-            max-width: 1400px;
+        /* ---------- START WINDOW (cosmic) ---------- */
+        .start-window {
+            max-width: 1100px;
             width: 100%;
-            background: rgba(18, 30, 38, 0.8);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 3.5rem;
-            padding: 2.5rem 2.8rem;
-            box-shadow: 0 40px 70px -15px #030c14, 0 0 0 1px rgba(90, 175, 230, 0.15) inset, 0 0 0 2px rgba(255,255,255,0.02);
-            border: 1px solid rgba(70, 150, 200, 0.2);
+            background: rgba(5, 18, 28, 0.8);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border-radius: 5rem;
+            padding: 3.5rem 3rem 4rem;
+            box-shadow: 0 40px 80px -10px #030b12, 0 0 0 1.5px rgba(0, 255, 255, 0.15) inset, 0 0 50px #0a4466;
+            border: 1px solid #2d7fb9;
+            text-align: center;
         }
 
-        /* header area */
-        .top-bar {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2.2rem;
-        }
-
-        .title-glow {
+        .nexus-logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 1rem;
         }
-
-        .title-glow h1 {
-            font-size: 2.5rem;
+        .nexus-logo i {
+            font-size: 5rem;
+            color: #6bc6ff;
+            filter: drop-shadow(0 0 18px #0099ff);
+        }
+        .nexus-logo span {
+            font-size: 3.3rem;
             font-weight: 700;
-            background: linear-gradient(120deg, #c1e4ff, #96d0ff);
+            background: linear-gradient(135deg, #b2e4ff, #5dc9ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
         }
 
-        .badge-dark {
-            background: #1e4055;
-            color: #c1e4ff;
-            padding: 0.4rem 1.6rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: 1px solid #307090;
-            box-shadow: 0 0 12px #1f5780;
+        .start-tagline {
+            font-size: 1.7rem;
+            color: #9ac7e7;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px dashed #1d678b;
+            padding-bottom: 1.2rem;
+            display: inline-block;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
-        .marks-chip {
-            background: #0f2a38;
+        .sem-grid {
+            display: flex;
+            gap: 2.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .sem-card {
+            background: rgba(7, 30, 45, 0.9);
+            border-radius: 4rem;
+            padding: 2.8rem 3.8rem;
+            cursor: pointer;
+            box-shadow: 0 25px 40px -12px #010e16, 0 0 0 2px #236b9b inset, 0 0 20px #005c99;
+            transition: 0.25s;
+            border: 1px solid #52b0ff;
+            width: 280px;
+        }
+
+        .sem-card:hover {
+            transform: scale(1.07) translateY(-10px);
+            background: #0c3147;
+            box-shadow: 0 30px 60px -6px #0f405b, 0 0 0 3px #7fc9ff inset, 0 0 40px #0080ff;
+        }
+
+        .sem-card i {
+            font-size: 4rem;
+            color: #b1e2ff;
+            margin-bottom: 1.2rem;
+            filter: drop-shadow(0 0 15px #2580c0);
+        }
+
+        .sem-card h2 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #b5e4ff, #5fb2f2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.6rem;
+        }
+
+        .sem-card p {
+            font-size: 1.1rem;
+            color: #96c5e6;
+        }
+
+        .pill-cg {
+            background: #0f3853;
             border-radius: 60px;
-            padding: 0.7rem 2rem;
-            border: 1px solid #3c7494;
-            color: #b2defa;
-            font-weight: 500;
+            padding: 0.8rem 2.5rem;
+            color: #ade2ff;
+            display: inline-block;
+            border: 1px solid #3f8fc7;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        /* ---------- MAIN APP WINDOW (dark, refined) ---------- */
+        .main-window {
+            display: none;
+            max-width: 1450px;
+            width: 100%;
+            background: rgba(3, 18, 30, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: 4.5rem;
+            padding: 2.2rem 2.8rem;
+            box-shadow: 0 45px 90px -15px #010b14, 0 0 0 1.5px #2e82b9 inset, 0 0 70px #004466;
+            border: 1px solid #479fd9;
+        }
+
+        /* app header with neon touch */
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .app-logo {
+            background: #0a263b;
+            border-radius: 80px;
+            padding: 0.7rem 2rem 0.7rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid #3ea0e6;
+            box-shadow: 0 0 25px #106a9e;
+        }
+        .app-logo i {
+            font-size: 3rem;
+            color: #94dcff;
+            filter: drop-shadow(0 0 10px #0077ff);
+        }
+        .app-logo span {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #d9f2ff;
+        }
+
+        .sem-indicator {
+            background: #0b3048;
+            border-radius: 60px;
+            padding: 0.8rem 2.5rem;
+            border: 2px solid #61b0f0;
+            box-shadow: 0 0 20px #006bb3;
+        }
+        .sem-indicator i, .sem-indicator span {
+            font-size: 1.8rem;
+            color: #b5e6ff;
+            margin-right: 0.6rem;
+        }
+
+        .back-button {
+            margin-left: auto;
+            background: #1a435b;
+            border: 2px solid #6db3f0;
+            border-radius: 60px;
+            padding: 0.8rem 2rem;
+            font-size: 1.3rem;
+            color: #e1f2ff;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 18px -6px #030f16;
-        }
-
-        .marks-chip i { font-style: normal; font-size: 1.5rem; filter: drop-shadow(0 0 5px #57b5ff); }
-
-        /* tabs – minimal but attractive */
-        .tab-panel {
-            display: flex;
-            gap: 2rem;
-            margin: 1rem 0 2.5rem 0;
-            border-bottom: 2px solid #254a60;
-            padding-bottom: 0.2rem;
-        }
-
-        .tab-button {
-            background: transparent;
-            border: none;
-            padding: 0.8rem 2.8rem 0.8rem 2.8rem;
-            font-size: 1.7rem;
-            font-weight: 600;
-            color: #9cbdd5;
-            cursor: pointer;
-            transition: 0.25s;
-            border-radius: 60px 60px 0 0;
-            position: relative;
-            letter-spacing: -0.3px;
-        }
-
-        .tab-button::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: #2d8fc0;
-            border-radius: 4px 4px 0 0;
-            opacity: 0;
             transition: 0.2s;
         }
+        .back-button:hover {
+            background: #235e80;
+            border-color: #a1d6ff;
+            box-shadow: 0 0 25px #2580d0;
+        }
 
-        .tab-button.active {
+        /* mini tabs */
+        .mini-tabs {
+            display: flex;
+            gap: 1.2rem;
+            margin: 1.8rem 0 2rem;
+        }
+        .mini-tab {
+            background: rgba(0, 30, 50, 0.7);
+            border: 2px solid #3a8dc7;
+            padding: 0.9rem 2.5rem;
+            border-radius: 60px;
+            font-size: 1.5rem;
+            font-weight: 550;
+            color: #bfe4ff;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .mini-tab i { font-size: 1.8rem; }
+        .mini-tab.active-tab {
+            background: #0b5986;
+            border-color: #9ad0ff;
             color: white;
-            text-shadow: 0 0 8px #7bc4ff;
+            box-shadow: 0 0 30px #0073ce;
         }
 
-        .tab-button.active::after {
-            opacity: 1;
-            box-shadow: 0 0 15px #2d9eff;
-        }
-
-        .tab-button:not(.active):hover {
-            color: #d2ecff;
-            background: rgba(45, 110, 150, 0.15);
-        }
-
-        /* panels */
-        .sem-panel {
-            display: none;
-            animation: fadeSlide 0.3s ease;
-        }
-
-        .sem-panel.active-panel {
-            display: block;
-        }
-
-        @keyframes fadeSlide {
-            0% { opacity: 0.2; transform: translateY(6px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* subject table header – dark but readable */
+        /* subject grid header */
         .grid-header {
             display: grid;
             grid-template-columns: 3fr 0.9fr 1.8fr 1.6fr 0.6fr;
             gap: 1rem;
-            background: #112c3b;
-            padding: 1rem 2rem;
+            background: #0a2c41;
+            padding: 1.2rem 2rem;
             border-radius: 60px;
-            margin: 0 0 1.2rem 0;
+            margin: 1rem 0 1.2rem;
             font-weight: 600;
-            color: #b2d9f5;
-            border: 1px solid #295e7c;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 6px 14px #0a1c27;
+            color: #b3e2ff;
+            border: 1px solid #3d8fc7;
+            box-shadow: 0 10px 20px -8px #04121e;
             font-size: 1rem;
         }
+        .grid-header i { margin-right: 8px; color: #69ccff; }
 
-        /* rows – dark glassy */
         .subject-row {
             display: grid;
             grid-template-columns: 3fr 0.9fr 1.8fr 1.6fr 0.6fr;
             gap: 1rem;
             align-items: center;
-            background: rgba(15, 40, 52, 0.7);
-            padding: 0.7rem 2rem;
+            background: rgba(8, 35, 53, 0.8);
+            padding: 0.8rem 2rem;
             border-radius: 60px;
             margin-bottom: 0.9rem;
-            border: 1px solid #2a5b78;
+            border: 1.5px solid #2d6f9c;
+            backdrop-filter: blur(8px);
             transition: 0.2s;
-            box-shadow: 0 8px 16px -8px #06131c;
-            backdrop-filter: blur(4px);
+            box-shadow: 0 8px 16px -4px #010e18;
         }
-
         .subject-row:hover {
-            border-color: #4b93c0;
-            background: rgba(20, 55, 72, 0.8);
-            box-shadow: 0 0 18px #1f628b;
+            border-color: #6bb9ff;
+            background: #103d5b;
+            box-shadow: 0 0 25px #1f77b0;
         }
 
         .subj-name {
             font-weight: 550;
-            color: #d3ecff;
+            color: #d0edff;
             font-size: 1.05rem;
-            text-shadow: 0 2px 3px #030f17;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+        .subj-name i { color: #63bef7; width: 1.8rem; }
 
         .credit-chip {
-            background: #163d51;
+            background: #0f3752;
             border-radius: 40px;
             padding: 0.5rem 1rem;
             text-align: center;
             font-weight: 600;
-            color: #b3defa;
-            border: 1px solid #327197;
+            color: #b2e2ff;
+            border: 1px solid #4790c2;
             width: fit-content;
-            min-width: 70px;
-            box-shadow: inset 0 1px 4px #1c475e;
+            box-shadow: inset 0 2px 5px #03131f;
         }
 
         .marks-input {
             width: 100%;
             padding: 0.75rem 1rem;
-            background: #0d2736;
-            border: 2px solid #234f6b;
+            background: #0a273d;
+            border: 2px solid #2f6f9b;
             border-radius: 60px;
             font-size: 1rem;
-            color: #f0f9ff;
-            transition: 0.2s;
+            color: #eff9ff;
             text-align: center;
         }
-
         .marks-input:focus {
-            border-color: #3da6ff;
+            border-color: #3da2f0;
             outline: none;
-            box-shadow: 0 0 0 4px rgba(0,150,255,0.3);
-            background: #0f3142;
+            box-shadow: 0 0 0 4px rgba(0, 140, 255, 0.4);
+            background: #103c59;
         }
 
         .grade-badge {
-            background: #0f3144;
+            background: #0c314b;
             border-radius: 60px;
             padding: 0.6rem 1rem;
             text-align: center;
             font-weight: 600;
-            color: #a5dcff;
-            border: 1px solid #3d7ca3;
-            font-size: 1rem;
-            backdrop-filter: blur(4px);
-        }
-
-        .delete-cell {
-            display: flex;
-            justify-content: center;
+            color: #b7e6ff;
+            border: 1px solid #479fda;
         }
 
         .delete-btn {
@@ -251,475 +326,287 @@
             border: none;
             font-size: 2rem;
             cursor: pointer;
-            color: #6f9fbf;
+            color: #70a9cf;
             transition: 0.1s;
-            line-height: 1;
-            filter: drop-shadow(0 0 4px #101c26);
         }
+        .delete-btn:hover { color: #ff7070; transform: scale(1.2); text-shadow: 0 0 15px red; }
 
-        .delete-btn:hover {
-            color: #ff7070;
-            transform: scale(1.2);
-            text-shadow: 0 0 12px #ff5e5e;
-        }
-
-        /* action buttons */
         .action-strip {
             display: flex;
-            gap: 1.4rem;
-            margin: 2.5rem 0 2rem;
+            gap: 1.5rem;
+            margin: 2.2rem 0 2rem;
             flex-wrap: wrap;
         }
-
         .btn {
-            background: rgba(16, 44, 60, 0.8);
-            border: 2px solid #2c6c90;
+            background: rgba(12, 48, 74, 0.9);
+            border: 2px solid #418fc2;
             padding: 0.8rem 2.5rem;
             border-radius: 60px;
             font-weight: 600;
-            color: #ceecff;
-            font-size: 1rem;
+            color: #d6f0ff;
             cursor: pointer;
-            transition: 0.2s;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 18px -10px #030d13;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
         }
-
         .btn-primary {
-            background: #166a97;
-            border-color: #5bb0e6;
-            color: white;
-            box-shadow: 0 0 20px #1173b0;
+            background: #0e5790;
+            border-color: #7fc4ff;
+            box-shadow: 0 0 20px #0073d1;
         }
+        .btn-primary:hover { background: #1573b5; }
 
-        .btn-primary:hover {
-            background: #1d82b5;
-            border-color: #93d0ff;
-            box-shadow: 0 0 28px #1f95d6;
-            transform: scale(1.02);
-        }
-
-        .btn:hover {
-            background: #1d4c68;
-            border-color: #4794c9;
-            color: white;
-        }
-
-        /* result footer – glowing dark */
         .result-footer {
-            background: rgba(10, 28, 40, 0.9);
-            backdrop-filter: blur(16px);
-            border-radius: 70px;
+            background: rgba(4, 30, 48, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 80px;
             padding: 2.2rem 3rem;
             margin-top: 2.5rem;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid #2e7199;
-            box-shadow: 0 20px 30px -10px #030f1a, 0 0 30px #104b70;
+            border: 2px solid #3987c0;
+            box-shadow: 0 0 40px #004e80;
         }
-
-        .cgpa-box {
-            display: flex;
-            align-items: baseline;
-            gap: 0.8rem;
-        }
-
         .cgpa-number {
             font-size: 5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #b3e2ff, #69ccff);
+            background: linear-gradient(135deg, #b2e6ff, #60cbff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1;
-            filter: drop-shadow(0 0 20px #197bbd);
+            filter: drop-shadow(0 0 25px #0080ff);
         }
-
-        .cgpa-ten {
-            font-size: 1.6rem;
-            color: #99c9f0;
-        }
-
-        .stats-box {
-            display: flex;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .stat-value {
-            font-size: 2.4rem;
-            font-weight: 600;
-            color: #c2e3ff;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: #87bad4;
-            letter-spacing: 1px;
-        }
+        .stat-value { font-size: 2.3rem; font-weight: 600; color: #b5e2ff; }
+        .stat-label { color: #8fc6ec; }
 
         .footnote {
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
             display: flex;
             justify-content: space-between;
-            color: #79b1cf;
-            align-items: center;
+            color: #71b3de;
         }
-
-        .marks-note {
-            background: #11384f;
-            color: #bee2ff;
-            padding: 0.4rem 2rem;
-            border-radius: 60px;
-            border: 1px solid #2a78a3;
-        }
-
-        /* custom scroll for dark */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1d3f53; border-radius: 20px; }
-        ::-webkit-scrollbar-thumb { background: #3e799b; border-radius: 20px; }
+        .footnote i { margin-right: 6px; color: #41a5f0; }
     </style>
 </head>
 <body>
-<div class="cgpa-vault">
-    <!-- header -->
-    <div class="top-bar">
-        <div class="title-glow">
-            <h1>🎓 CGPA · DARK MODE</h1>
-            <span class="badge-dark">/10 scale</span>
+    <!-- START WINDOW (cosmic dark) -->
+    <div id="startWindow" class="start-window">
+        <div class="nexus-logo">
+            <i class="fas fa-galactic-republic"></i>
+            <span>GRADE·NEXUS</span>
+            <i class="fas fa-meteor"></i>
         </div>
-        <div class="marks-chip">
-            <i>📊</i> ENTER MARKS (0–100)
+        <div class="start-tagline">
+            <i class="fas fa-chevron-circle-right"></i> initiate semester
         </div>
-    </div>
-
-    <!-- tabs with clean headings (only 1st sem / 2nd sem) -->
-    <div class="tab-panel">
-        <button class="tab-button active" id="tabFirst">1ˢᵗ SEMESTER</button>
-        <button class="tab-button" id="tabSecond">2ⁿᵈ SEMESTER</button>
-    </div>
-
-    <!-- semester 1 panel (subjects including CTP lab 1cr, CAEG 1.5cr) -->
-    <div id="sem1Panel" class="sem-panel active-panel">
-        <div class="grid-header">
-            <span>📚 SUBJECT (SEM 1)</span>
-            <span>CR</span>
-            <span>MARKS (0–100)</span>
-            <span>GRADE/10</span>
-            <span style="text-align:center;">⚙️</span>
-        </div>
-        <div id="sem1RowsContainer"></div>
-        <div class="action-strip">
-            <button class="btn btn-primary" id="addCustom1">➕ ADD CUSTOM</button>
-            <button class="btn" id="resetMarks1">⟲ RESET MARKS</button>
-        </div>
-    </div>
-
-    <!-- semester 2 panel (subjects including OOP lab 1cr, CAMD 1.5cr) -->
-    <div id="sem2Panel" class="sem-panel">
-        <div class="grid-header">
-            <span>📚 SUBJECT (SEM 2)</span>
-            <span>CR</span>
-            <span>MARKS (0–100)</span>
-            <span>GRADE/10</span>
-            <span style="text-align:center;">⚙️</span>
-        </div>
-        <div id="sem2RowsContainer"></div>
-        <div class="action-strip">
-            <button class="btn btn-primary" id="addCustom2">➕ ADD CUSTOM</button>
-            <button class="btn" id="resetMarks2">⟲ RESET MARKS</button>
-        </div>
-    </div>
-
-    <!-- combined CGPA result -->
-    <div class="result-footer">
-        <div class="cgpa-box">
-            <span class="cgpa-number" id="cgpaDisplay">0.00</span>
-            <span class="cgpa-ten">/10</span>
-        </div>
-        <div class="stats-box">
-            <div class="stat">
-                <span class="stat-value" id="totalCreditsDisplay">0</span>
-                <span class="stat-label">TOTAL CREDITS</span>
+        <div class="sem-grid">
+            <div class="sem-card" id="chooseSem1">
+                <i class="fas fa-1"></i>
+                <h2>SEM 1</h2>
+                <p><i class="fas fa-flask"></i> CTP lab · CAEG · foundation</p>
             </div>
-            <div class="stat">
-                <span class="stat-value" id="weightedSumDisplay">0.00</span>
-                <span class="stat-label">WEIGHTED SUM</span>
+            <div class="sem-card" id="chooseSem2">
+                <i class="fas fa-2"></i>
+                <h2>SEM 2</h2>
+                <p><i class="fas fa-laptop-code"></i> OOP lab · CAMD · maths 2</p>
             </div>
         </div>
+        <div class="pill-cg">
+            <i class="fas fa-star"></i> CGPA out of 10 · marks→grade/10 <i class="fas fa-star"></i>
+        </div>
     </div>
 
-    <div class="footnote">
-        <span>⚡ marks → grade = marks/10  (e.g., 82 → 8.2) · audit 0cr ignored</span>
-        <span class="marks-note">🔹 Σ(grade×credit) / Σ credits</span>
+    <!-- MAIN APP WINDOW (dark immersive) -->
+    <div id="mainWindow" class="main-window">
+        <div class="app-header">
+            <div class="app-logo">
+                <i class="fas fa-brain"></i>
+                <span>nexus·cgpa</span>
+            </div>
+            <div id="semHeading" class="sem-indicator">
+                <i class="fas fa-book-open"></i>
+                <span>1ˢᵗ semester</span>
+            </div>
+            <button id="backToStartBtn" class="back-button">
+                <i class="fas fa-arrow-left"></i> back
+            </button>
+        </div>
+
+        <!-- mini tabs for quick switch -->
+        <div class="mini-tabs">
+            <button class="mini-tab" id="miniSem1"><i class="fas fa-1"></i> sem 1</button>
+            <button class="mini-tab" id="miniSem2"><i class="fas fa-2"></i> sem 2</button>
+        </div>
+
+        <!-- sem 1 panel -->
+        <div id="sem1Panel" class="sem-panel" style="display: none;">
+            <div class="grid-header">
+                <span><i class="fas fa-book"></i> SUBJECT (SEM 1)</span>
+                <span><i class="fas fa-cubes"></i> CR</span>
+                <span><i class="fas fa-pencil-alt"></i> MARKS</span>
+                <span><i class="fas fa-chart-line"></i> /10</span>
+                <span><i class="fas fa-trash"></i></span>
+            </div>
+            <div id="sem1RowsContainer"></div>
+            <div class="action-strip">
+                <button class="btn btn-primary" id="addCustom1"><i class="fas fa-plus-circle"></i> custom subject</button>
+                <button class="btn" id="resetMarks1"><i class="fas fa-undo-alt"></i> reset marks</button>
+            </div>
+        </div>
+
+        <!-- sem 2 panel -->
+        <div id="sem2Panel" class="sem-panel" style="display: none;">
+            <div class="grid-header">
+                <span><i class="fas fa-book"></i> SUBJECT (SEM 2)</span>
+                <span><i class="fas fa-cubes"></i> CR</span>
+                <span><i class="fas fa-pencil-alt"></i> MARKS</span>
+                <span><i class="fas fa-chart-line"></i> /10</span>
+                <span><i class="fas fa-trash"></i></span>
+            </div>
+            <div id="sem2RowsContainer"></div>
+            <div class="action-strip">
+                <button class="btn btn-primary" id="addCustom2"><i class="fas fa-plus-circle"></i> custom subject</button>
+                <button class="btn" id="resetMarks2"><i class="fas fa-undo-alt"></i> reset marks</button>
+            </div>
+        </div>
+
+        <!-- combined footer -->
+        <div class="result-footer">
+            <div style="display: flex; align-items: baseline; gap: 1rem;">
+                <span class="cgpa-number" id="cgpaDisplay">0.00</span>
+                <span style="font-size: 2rem; color:#8ec9ff;">/10</span>
+            </div>
+            <div style="display: flex; gap: 3rem;">
+                <div><span class="stat-value" id="totalCreditsDisplay">0</span> <span class="stat-label">credits</span></div>
+                <div><span class="stat-value" id="weightedSumDisplay">0.00</span> <span class="stat-label">weighted</span></div>
+            </div>
+        </div>
+        <div class="footnote">
+            <span><i class="fas fa-calculator"></i> grade = marks/10 (max 100) · audit 0 ignored</span>
+            <span><i class="fas fa-sigma"></i> Σ(grade×credit)/Σcr</span>
+        </div>
     </div>
-</div>
 
-<script>
-    (function() {
-        // ----- fixed subjects sem1 (with CTP lab 1cr, CAEG 1.5cr) -----
-        const sem1Fixed = [
-            { name: "Maths 1", credits: 4 },
-            { name: "Physics / Chemistry", credits: 4 },
-            { name: "Computational Thinking & Programming", credits: 2 },
-            { name: "Basic Electrical / Mechanical / Civil Engg.", credits: 2 },
-            { name: "Audit (0 cr)", credits: 0 },
-            { name: "Communication Skills / Human Values", credits: 2 },
-            { name: "BEEE Lab / Mechanical Workshop", credits: 1 },
-            { name: "COS Lab / HV Lab", credits: 1 },
-            { name: "Physics Lab / Chem Lab", credits: 1 },
-            { name: "Foundation Course", credits: 0.5 },
-            { name: "CTP Lab", credits: 1 },
-            { name: "CAEG", credits: 1.5 }
-        ];
+    <script>
+        (function() {
+            // subject data (exact)
+            const sem1Fixed = [
+                { name: "Maths 1", credits: 4 }, { name: "Physics / Chemistry", credits: 4 },
+                { name: "Computational Thinking & Programming", credits: 2 },
+                { name: "Basic Electrical / Mechanical / Civil Engg.", credits: 2 },
+                { name: "Audit (0 cr)", credits: 0 },
+                { name: "Communication Skills / Human Values", credits: 2 },
+                { name: "BEEE Lab / Mechanical Workshop", credits: 1 },
+                { name: "COS Lab / HV Lab", credits: 1 }, { name: "Physics Lab / Chem Lab", credits: 1 },
+                { name: "Foundation Course", credits: 0.5 }, { name: "CTP Lab", credits: 1 },
+                { name: "CAEG", credits: 1.5 }
+            ];
+            const sem2Fixed = [
+                { name: "Maths 2", credits: 4 }, { name: "Physics / Chemistry", credits: 4 },
+                { name: "Problem Solving using OOP", credits: 2 },
+                { name: "Basic Electrical / Mechanical / Civil Engg.", credits: 2 },
+                { name: "Audit (0 cr)", credits: 0 },
+                { name: "Communication Skills / Human Values", credits: 2 },
+                { name: "BEEE Lab / Mechanical Workshop", credits: 1 },
+                { name: "COS Lab / HV Lab", credits: 1 }, { name: "Physics Lab / Chem Lab", credits: 1 },
+                { name: "Foundation Course", credits: 0.5 }, { name: "OOP Lab", credits: 1 },
+                { name: "CAMD", credits: 1.5 }
+            ];
 
-        // ----- fixed subjects sem2 (with OOP lab 1cr, CAMD 1.5cr) -----
-        const sem2Fixed = [
-            { name: "Maths 2", credits: 4 },
-            { name: "Physics / Chemistry", credits: 4 },
-            { name: "Problem Solving using OOP", credits: 2 },
-            { name: "Basic Electrical / Mechanical / Civil Engg.", credits: 2 },
-            { name: "Audit (0 cr)", credits: 0 },
-            { name: "Communication Skills / Human Values", credits: 2 },
-            { name: "BEEE Lab / Mechanical Workshop", credits: 1 },
-            { name: "COS Lab / HV Lab", credits: 1 },
-            { name: "Physics Lab / Chem Lab", credits: 1 },
-            { name: "Foundation Course", credits: 0.5 },
-            { name: "OOP Lab", credits: 1 },
-            { name: "CAMD", credits: 1.5 }
-        ];
+            const c1 = document.getElementById('sem1RowsContainer');
+            const c2 = document.getElementById('sem2RowsContainer');
 
-        const containerSem1 = document.getElementById('sem1RowsContainer');
-        const containerSem2 = document.getElementById('sem2RowsContainer');
+            function marksToGrade(m) { let v = parseFloat(m); if(isNaN(v)||v<0) return ''; v = Math.min(100,v); return (v/10).toFixed(2); }
+            function updateGradeDisplay(inp, span) { span.innerText = marksToGrade(inp.value) || '—'; }
 
-        function marksToGrade(marks) {
-            let m = parseFloat(marks);
-            if (isNaN(m) || m < 0) return '';
-            m = Math.min(100, Math.max(0, m));
-            return (m / 10).toFixed(2);
-        }
-
-        function updateGradeDisplay(marksInput, gradeSpan) {
-            const marks = marksInput.value;
-            gradeSpan.innerText = marksToGrade(marks) || '—';
-        }
-
-        // create fixed row (non-editable credits)
-        function createFixedRow(subjectName, creditValue, savedMarks = '') {
-            const row = document.createElement('div');
-            row.className = 'subject-row';
-
-            const nameDiv = document.createElement('div');
-            nameDiv.className = 'subj-name';
-            nameDiv.innerText = subjectName;
-
-            const creditDiv = document.createElement('div');
-            creditDiv.className = 'credit-chip';
-            creditDiv.innerText = creditValue + (creditValue === 0 ? ' (audit)' : '');
-
-            const marksInput = document.createElement('input');
-            marksInput.type = 'number';
-            marksInput.placeholder = '0–100';
-            marksInput.step = 'any';
-            marksInput.min = '0';
-            marksInput.max = '100';
-            marksInput.value = savedMarks;
-            marksInput.classList.add('marks-input');
-
-            const gradeSpan = document.createElement('span');
-            gradeSpan.className = 'grade-badge';
-            gradeSpan.innerText = savedMarks ? marksToGrade(savedMarks) : '—';
-
-            const delCell = document.createElement('div');
-            delCell.className = 'delete-cell';
-            const delBtn = document.createElement('button');
-            delBtn.className = 'delete-btn';
-            delBtn.innerHTML = '✕';
-            delBtn.setAttribute('aria-label', 'remove');
-            delBtn.onclick = function() { row.remove(); updateCombinedCGPA(); };
-            delCell.appendChild(delBtn);
-
-            row.appendChild(nameDiv);
-            row.appendChild(creditDiv);
-            row.appendChild(marksInput);
-            row.appendChild(gradeSpan);
-            row.appendChild(delCell);
-
-            marksInput.addEventListener('input', function() {
-                updateGradeDisplay(marksInput, gradeSpan);
-                updateCombinedCGPA();
-            });
-
-            return row;
-        }
-
-        // custom row (editable name + credits)
-        function createCustomRow(defaultName = '✏️ custom', defaultCredits = 2, savedMarks = '') {
-            const row = document.createElement('div');
-            row.className = 'subject-row';
-
-            const nameInput = document.createElement('input');
-            nameInput.type = 'text';
-            nameInput.value = defaultName;
-            nameInput.placeholder = 'subject';
-            nameInput.style.background = '#1b3a4b';
-            nameInput.style.border = '1px solid #2b6c90';
-            nameInput.style.borderRadius = '60px';
-            nameInput.style.padding = '0.6rem 1rem';
-            nameInput.style.fontSize = '0.95rem';
-            nameInput.style.width = '100%';
-            nameInput.style.color = '#e8f3ff';
-
-            const creditInput = document.createElement('input');
-            creditInput.type = 'number';
-            creditInput.value = defaultCredits;
-            creditInput.step = 'any';
-            creditInput.min = '0';
-            creditInput.style.width = '100%';
-            creditInput.style.padding = '0.6rem 0.8rem';
-            creditInput.style.borderRadius = '60px';
-            creditInput.style.border = '1px solid #2b6c90';
-            creditInput.style.textAlign = 'center';
-            creditInput.style.background = '#1b3a4b';
-            creditInput.style.color = 'white';
-            creditInput.classList.add('credit-custom');
-
-            const marksInput = document.createElement('input');
-            marksInput.type = 'number';
-            marksInput.placeholder = 'marks 0–100';
-            marksInput.step = 'any';
-            marksInput.min = '0';
-            marksInput.max = '100';
-            marksInput.value = savedMarks;
-            marksInput.classList.add('marks-input');
-
-            const gradeSpan = document.createElement('span');
-            gradeSpan.className = 'grade-badge';
-            gradeSpan.innerText = savedMarks ? marksToGrade(savedMarks) : '—';
-
-            const delCell = document.createElement('div');
-            delCell.className = 'delete-cell';
-            const delBtn = document.createElement('button');
-            delBtn.className = 'delete-btn';
-            delBtn.innerHTML = '✕';
-            delBtn.onclick = function() { row.remove(); updateCombinedCGPA(); };
-            delCell.appendChild(delBtn);
-
-            row.appendChild(nameInput);
-            row.appendChild(creditInput);
-            row.appendChild(marksInput);
-            row.appendChild(gradeSpan);
-            row.appendChild(delCell);
-
-            marksInput.addEventListener('input', function() {
-                updateGradeDisplay(marksInput, gradeSpan);
-                updateCombinedCGPA();
-            });
-            creditInput.addEventListener('input', updateCombinedCGPA);
-
-            return row;
-        }
-
-        function initSemester(container, subjectList) {
-            container.innerHTML = '';
-            subjectList.forEach(sub => {
-                const row = createFixedRow(sub.name, sub.credits, '');
-                container.appendChild(row);
-            });
-        }
-
-        function resetMarksInContainer(container) {
-            const marksInputs = container.querySelectorAll('.marks-input');
-            marksInputs.forEach(inp => inp.value = '');
-            const rows = container.querySelectorAll('.subject-row');
-            rows.forEach(row => {
-                const marksInp = row.querySelector('.marks-input');
-                const gradeSpan = row.querySelector('.grade-badge');
-                if (marksInp && gradeSpan) updateGradeDisplay(marksInp, gradeSpan);
-            });
-            updateCombinedCGPA();
-        }
-
-        function updateCombinedCGPA() {
-            let totalCredits = 0, totalWeighted = 0;
-            function process(container) {
-                const rows = container.querySelectorAll('.subject-row');
-                rows.forEach(row => {
-                    const creditChip = row.querySelector('.credit-chip');
-                    const creditCustom = row.querySelector('.credit-custom');
-                    const marksInput = row.querySelector('.marks-input');
-                    if (!marksInput) return;
-
-                    let credits = 0;
-                    if (creditCustom) {
-                        credits = parseFloat(creditCustom.value) || 0;
-                    } else if (creditChip) {
-                        const match = creditChip.innerText.match(/[\d.]+/);
-                        credits = match ? parseFloat(match[0]) : 0;
-                    }
-
-                    const marks = parseFloat(marksInput.value);
-                    if (!isNaN(marks) && marks >= 0 && credits > 0) {
-                        totalWeighted += credits * (marks / 10);
-                        totalCredits += credits;
-                    }
-                });
+            function createRow(name, credit, saved='') {
+                const row = document.createElement('div'); row.className = 'subject-row';
+                const nameDiv = document.createElement('div'); nameDiv.className = 'subj-name'; nameDiv.innerHTML = `<i class="fas fa-dot-circle"></i> ${name}`;
+                const creditDiv = document.createElement('div'); creditDiv.className = 'credit-chip'; creditDiv.innerText = credit + (credit===0?' audit':'');
+                const marks = document.createElement('input'); marks.type='number'; marks.placeholder='0–100'; marks.step='any'; marks.min='0'; marks.max='100'; marks.value=saved; marks.classList.add('marks-input');
+                const gradeSpan = document.createElement('span'); gradeSpan.className = 'grade-badge'; gradeSpan.innerText = saved? marksToGrade(saved):'—';
+                const delCell = document.createElement('div'); 
+                const del = document.createElement('button'); del.className = 'delete-btn'; del.innerHTML = '<i class="fas fa-times-circle"></i>';
+                del.onclick = function() { row.remove(); updateCGPA(); };
+                delCell.appendChild(del);
+                row.append(nameDiv, creditDiv, marks, gradeSpan, delCell);
+                marks.addEventListener('input', function() { updateGradeDisplay(marks, gradeSpan); updateCGPA(); });
+                return row;
             }
-            process(containerSem1);
-            process(containerSem2);
-            const cgpa = totalCredits > 0 ? totalWeighted / totalCredits : 0;
-            document.getElementById('cgpaDisplay').innerText = cgpa.toFixed(3);
-            document.getElementById('totalCreditsDisplay').innerText = totalCredits;
-            document.getElementById('weightedSumDisplay').innerText = totalWeighted.toFixed(2);
-        }
 
-        // init
-        initSemester(containerSem1, sem1Fixed);
-        initSemester(containerSem2, sem2Fixed);
+            function createCustomRow(defName='✏️ custom', defCredits=2, saved='') {
+                const row = document.createElement('div'); row.className = 'subject-row';
+                const nameInp = document.createElement('input'); nameInp.type='text'; nameInp.value=defName; nameInp.style.background='#0d3148'; nameInp.style.border='1px solid #3f8ec7'; nameInp.style.borderRadius='60px'; nameInp.style.padding='0.6rem 1rem'; nameInp.style.color='white'; nameInp.style.width='100%';
+                const creditInp = document.createElement('input'); creditInp.type='number'; creditInp.value=defCredits; creditInp.step='any'; creditInp.min='0'; creditInp.style.width='100%'; creditInp.style.background='#0d3148'; creditInp.style.border='1px solid #3f8ec7'; creditInp.style.borderRadius='60px'; creditInp.style.padding='0.6rem'; creditInp.style.color='white'; creditInp.style.textAlign='center'; creditInp.classList.add('credit-custom');
+                const marks = document.createElement('input'); marks.type='number'; marks.placeholder='0–100'; marks.step='any'; marks.min='0'; marks.max='100'; marks.value=saved; marks.classList.add('marks-input');
+                const gradeSpan = document.createElement('span'); gradeSpan.className = 'grade-badge'; gradeSpan.innerText = saved? marksToGrade(saved):'—';
+                const delCell = document.createElement('div');
+                const del = document.createElement('button'); del.className = 'delete-btn'; del.innerHTML = '<i class="fas fa-times-circle"></i>';
+                del.onclick = function() { row.remove(); updateCGPA(); };
+                delCell.appendChild(del);
+                row.append(nameInp, creditInp, marks, gradeSpan, delCell);
+                marks.addEventListener('input', function() { updateGradeDisplay(marks, gradeSpan); updateCGPA(); });
+                creditInp.addEventListener('input', updateCGPA);
+                return row;
+            }
 
-        // tabs
-        const tab1 = document.getElementById('tabFirst');
-        const tab2 = document.getElementById('tabSecond');
-        const panel1 = document.getElementById('sem1Panel');
-        const panel2 = document.getElementById('sem2Panel');
+            function initSem(cont, list) { cont.innerHTML = ''; list.forEach(s => cont.appendChild(createRow(s.name, s.credits, ''))); }
+            initSem(c1, sem1Fixed); initSem(c2, sem2Fixed);
 
-        tab1.addEventListener('click', () => {
-            tab1.classList.add('active');
-            tab2.classList.remove('active');
-            panel1.classList.add('active-panel');
-            panel2.classList.remove('active-panel');
-        });
+            function resetContainer(cont) {
+                cont.querySelectorAll('.marks-input').forEach(i => i.value = '');
+                cont.querySelectorAll('.subject-row').forEach(r => { let mi=r.querySelector('.marks-input'), g=r.querySelector('.grade-badge'); if(mi&&g) updateGradeDisplay(mi,g); });
+                updateCGPA();
+            }
 
-        tab2.addEventListener('click', () => {
-            tab2.classList.add('active');
-            tab1.classList.remove('active');
-            panel2.classList.add('active-panel');
-            panel1.classList.remove('active-panel');
-        });
+            function updateCGPA() {
+                let totalCred=0, totalW=0;
+                function proc(con) {
+                    con.querySelectorAll('.subject-row').forEach(r => {
+                        let chip = r.querySelector('.credit-chip'), cust = r.querySelector('.credit-custom'), mi = r.querySelector('.marks-input');
+                        if(!mi) return;
+                        let credits = 0;
+                        if(cust) credits = parseFloat(cust.value) || 0;
+                        else if(chip) { let m = chip.innerText.match(/[\d.]+/); credits = m? parseFloat(m[0]):0; }
+                        let marks = parseFloat(mi.value);
+                        if(!isNaN(marks) && marks>=0 && credits>0) { totalW += credits * (marks/10); totalCred += credits; }
+                    });
+                }
+                proc(c1); proc(c2);
+                document.getElementById('cgpaDisplay').innerText = (totalCred>0? (totalW/totalCred):0).toFixed(3);
+                document.getElementById('totalCreditsDisplay').innerText = totalCred;
+                document.getElementById('weightedSumDisplay').innerText = totalW.toFixed(2);
+            }
 
-        // custom add
-        document.getElementById('addCustom1').addEventListener('click', () => {
-            containerSem1.appendChild(createCustomRow('📌 custom', 2, ''));
-            updateCombinedCGPA();
-        });
-        document.getElementById('addCustom2').addEventListener('click', () => {
-            containerSem2.appendChild(createCustomRow('📌 custom', 2, ''));
-            updateCombinedCGPA();
-        });
+            // UI start/main
+            const startWin = document.getElementById('startWindow');
+            const mainWin = document.getElementById('mainWindow');
+            const semHeading = document.getElementById('semHeading');
+            const p1 = document.getElementById('sem1Panel');
+            const p2 = document.getElementById('sem2Panel');
+            const mini1 = document.getElementById('miniSem1');
+            const mini2 = document.getElementById('miniSem2');
 
-        // reset
-        document.getElementById('resetMarks1').addEventListener('click', () => resetMarksInContainer(containerSem1));
-        document.getElementById('resetMarks2').addEventListener('click', () => resetMarksInContainer(containerSem2));
+            function showSem1() { semHeading.innerHTML = '<i class="fas fa-book-open"></i> <span>1ˢᵗ semester</span>'; p1.style.display='block'; p2.style.display='none'; mini1.classList.add('active-tab'); mini2.classList.remove('active-tab'); }
+            function showSem2() { semHeading.innerHTML = '<i class="fas fa-book-open"></i> <span>2ⁿᵈ semester</span>'; p2.style.display='block'; p1.style.display='none'; mini2.classList.add('active-tab'); mini1.classList.remove('active-tab'); }
 
-        updateCombinedCGPA();
-    })();
-</script>
+            document.getElementById('chooseSem1').addEventListener('click', ()=>{ startWin.style.display='none'; mainWin.style.display='block'; showSem1(); updateCGPA(); });
+            document.getElementById('chooseSem2').addEventListener('click', ()=>{ startWin.style.display='none'; mainWin.style.display='block'; showSem2(); updateCGPA(); });
+            document.getElementById('backToStartBtn').addEventListener('click', ()=>{ mainWin.style.display='none'; startWin.style.display='block'; });
+            mini1.addEventListener('click', showSem1);
+            mini2.addEventListener('click', showSem2);
+
+            document.getElementById('addCustom1').addEventListener('click', ()=>{ c1.appendChild(createCustomRow('⚡ elective',2,'')); updateCGPA(); });
+            document.getElementById('addCustom2').addEventListener('click', ()=>{ c2.appendChild(createCustomRow('⚡ elective',2,'')); updateCGPA(); });
+            document.getElementById('resetMarks1').addEventListener('click', ()=> resetContainer(c1));
+            document.getElementById('resetMarks2').addEventListener('click', ()=> resetContainer(c2));
+
+            updateCGPA();
+        })();
+    </script>
 </body>
 </html>
