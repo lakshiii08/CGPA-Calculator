@@ -1,160 +1,378 @@
-# CGPA-Calculator
-.
+# 🌙 GRADE·NEXUS — Premium CGPA Calculator
 
-🌙 GRADE·NEXUS — CGPA Calculator (Sem 1 & Sem 2)
+<div align="center">
 
-A dark-themed, interactive CGPA calculator for 1st and 2nd semester students with pre-installed subject credits.
-Built to make CGPA calculation instant, accurate, and visually immersive.
+### 🎓 Smart • Accurate • Interactive
 
-✨ Features
+A modern dark-themed CGPA calculator designed for first-year engineering students.
 
-🎓 Semester-wise CGPA calculation (Sem 1 & Sem 2)
+Calculate Semester 1 and Semester 2 CGPA instantly using a pre-configured credit structure, real-time grade conversion, and a visually immersive glassmorphism interface.
 
-🧮 Pre-installed official credit structure
+![HTML](https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge\&logo=html5)
+![CSS](https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge\&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-Logic-yellow?style=for-the-badge\&logo=javascript)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-✏️ Custom subject support (electives / extras)
+</div>
 
-📊 Live CGPA update as you enter marks
+---
 
-🧠 Marks → Grade conversion (grade = marks / 10)
+## ✨ Overview
 
-🚫 Audit subjects (0 credit) ignored automatically
+**GRADE·NEXUS** is a modern CGPA calculator built for engineering students who want a quick, accurate, and elegant way to calculate their academic performance.
 
-🌌 Dark, glassmorphism UI with smooth transitions
+Instead of manually calculating weighted grades, students can simply enter marks and instantly receive their CGPA based on the official semester credit structure.
 
-🔁 Reset marks & switch semesters anytime
+The application features a futuristic dark UI, smooth transitions, live calculations, and support for custom subjects.
 
-🧑‍💻 Tech Stack
+---
 
-HTML5
+# 🚀 Features
 
-CSS3 (Dark UI, glassmorphism, animations)
+### 🎓 Semester-Wise CGPA Calculation
 
-Vanilla JavaScript
+* Semester 1 support
+* Semester 2 support
+* Instant semester switching
 
-Font Awesome 6 (icons)
+### 🧮 Automated Credit System
 
-No frameworks. No backend. Runs directly in the browser.
+* Official credit structure pre-installed
+* No manual credit entry required
+* Weighted calculations handled automatically
 
-📚 Credit Structure (Pre-Installed)
-🔹 Semester 1
+### ⚡ Real-Time Updates
 
-Maths 1 — 4
+* Live CGPA calculation
+* Instant grade conversion
+* Dynamic weighted score updates
 
-Physics / Chemistry — 4
+### ✏️ Custom Subject Support
 
-Computational Thinking & Programming — 2
+Add:
 
-Basic Electrical / Mechanical / Civil Engg. — 2
+* Electives
+* Open electives
+* Additional courses
+* Special subjects
 
-Communication Skills / Human Values — 2
+with custom credits.
 
-BEEE Lab / Mechanical Workshop — 1
+### 🚫 Audit Subject Handling
 
-COS Lab / HV Lab — 1
+Subjects carrying **0 credits** are automatically excluded from CGPA calculations.
 
-Physics Lab / Chemistry Lab — 1
+### 🌌 Premium UI Experience
 
-CTP Lab — 1
+* Dark theme
+* Glassmorphism cards
+* Smooth animations
+* Responsive layout
+* Modern typography
 
-CAEG — 1.5
+### 🔁 Quick Reset
 
-Foundation Course — 0.5
+* Reset all marks instantly
+* Start a fresh calculation anytime
 
-Audit — 0 (ignored)
+---
 
-🔹 Semester 2
+# 🧑‍💻 Tech Stack
 
-Maths 2 — 4
+| Technology     | Purpose              |
+| -------------- | -------------------- |
+| HTML5          | Structure            |
+| CSS3           | Styling & Animations |
+| JavaScript     | Logic & Calculations |
+| Font Awesome 6 | Icons                |
 
-Physics / Chemistry — 4
+### Architecture
 
-Problem Solving using OOP — 2
+Frontend-only application.
 
-Basic Electrical / Mechanical / Civil Engg. — 2
+No backend required.
 
-Communication Skills / Human Values — 2
+No database required.
 
-BEEE Lab / Mechanical Workshop — 1
+Runs directly inside the browser.
 
-COS Lab / HV Lab — 1
+---
 
-Physics Lab / Chemistry Lab — 1
+# 📚 Semester Credit Structure
 
-OOP Lab — 1
+## 🔹 Semester 1
 
-CAMD — 1.5
+| Subject                                           | Credits |
+| ------------------------------------------------- | ------- |
+| Mathematics-I                                     | 4       |
+| Physics / Chemistry                               | 4       |
+| Computational Thinking & Programming              | 2       |
+| Basic Electrical / Mechanical / Civil Engineering | 2       |
+| Communication Skills / Human Values               | 2       |
+| BEEE Lab / Mechanical Workshop                    | 1       |
+| COS Lab / HV Lab                                  | 1       |
+| Physics Lab / Chemistry Lab                       | 1       |
+| CTP Lab                                           | 1       |
+| CAEG                                              | 1.5     |
+| Foundation Course                                 | 0.5     |
+| Audit Course                                      | 0       |
 
-Foundation Course — 0.5
+### Total Credits: 20
 
-Audit — 0 (ignored)
+---
 
-🧮 CGPA Formula Used
+## 🔹 Semester 2
 
-Grade Point = Marks / 10 (Max marks = 100)
+| Subject                                           | Credits |
+| ------------------------------------------------- | ------- |
+| Mathematics-II                                    | 4       |
+| Physics / Chemistry                               | 4       |
+| Problem Solving Using OOP                         | 2       |
+| Basic Electrical / Mechanical / Civil Engineering | 2       |
+| Communication Skills / Human Values               | 2       |
+| BEEE Lab / Mechanical Workshop                    | 1       |
+| COS Lab / HV Lab                                  | 1       |
+| Physics Lab / Chemistry Lab                       | 1       |
+| OOP Lab                                           | 1       |
+| CAMD                                              | 1.5     |
+| Foundation Course                                 | 0.5     |
+| Audit Course                                      | 0       |
 
-Weighted Score = Grade × Credits
+### Total Credits: 20
 
-CGPA =
+---
 
-Σ
-(
-Grade
-×
-Credits
-)
-  
-/
-  
-Σ
-(
-Credits
-)
-Σ(Grade×Credits)/Σ(Credits)
+# 🧠 Grading System
 
-Audit subjects (0 credits) do not affect CGPA.
-.
+Marks are automatically converted into Grade Points.
 
-🚀 How to Run
+### Formula
 
-Download or clone the repository
+```text
+Grade Point = Marks ÷ 10
+```
 
-Open the index.html file in any modern browser
+Example:
 
-Select Semester 1 or Semester 2
+```text
+Marks = 85
 
-Enter marks (0–100)
+Grade Point = 8.5
+```
 
-View live CGPA at the bottom
+Maximum Grade Point:
 
-No installation required.
+```text
+10
+```
 
-🖼️ UI Flow
+---
 
-Start Screen – Choose semester
+# 📊 CGPA Formula
 
-Main App –
+The calculator follows the weighted credit method.
 
-Enter marks
+```text
+Weighted Score = Grade Point × Credits
+```
 
-Add custom subjects (optional)
+```text
+CGPA = Σ(Grade × Credits) / Σ(Credits)
+```
 
-Switch semesters using mini tabs
+Where:
 
-Result Footer –
+* Grade = Marks ÷ 10
+* Credits = Subject Credits
+* Audit Subjects = Ignored
 
-CGPA (out of 10)
+---
 
-Total credits
+# 🖼️ User Experience Flow
 
-Weighted sum
+## 1️⃣ Start Screen
 
-💡 Future Enhancements
+Choose:
 
-📄 Export CGPA report (PDF)
+* Semester 1
+* Semester 2
 
-🏫 College-specific grading scale
+---
 
-📱 Mobile-first optimizations
+## 2️⃣ Marks Entry
 
-🌐 Multi-semester support (Sem 3+)
+Enter marks for all subjects.
+
+Features:
+
+* Live validation
+* Instant updates
+* Dynamic calculations
+
+---
+
+## 3️⃣ Optional Custom Subjects
+
+Add:
+
+* Electives
+* Open electives
+* Additional courses
+
+with custom credits.
+
+---
+
+## 4️⃣ Result Dashboard
+
+Displays:
+
+### 🎯 CGPA
+
+```text
+Out of 10
+```
+
+### 📚 Total Credits
+
+```text
+Semester Credits
+```
+
+### 📊 Weighted Sum
+
+```text
+Total Weighted Grade Score
+```
+
+---
+
+# 📱 Responsive Design
+
+Optimized for:
+
+* 💻 Desktop
+* 📱 Mobile
+* 📟 Tablets
+* 🖥️ Large Screens
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/grade-nexus.git
+```
+
+Move into the project:
+
+```bash
+cd grade-nexus
+```
+
+Run:
+
+```bash
+Open index.html
+```
+
+No dependencies.
+
+No package manager.
+
+No build process.
+
+---
+
+# 📂 Project Structure
+
+```text
+GRADE-NEXUS/
+│
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│
+└── README.md
+```
+
+---
+
+# 🎯 Why Grade·Nexus?
+
+✔ Fast calculations
+
+✔ Accurate CGPA results
+
+✔ Official credit structure
+
+✔ Beautiful dark interface
+
+✔ Zero setup
+
+✔ Lightweight
+
+✔ Beginner-friendly
+
+✔ Mobile responsive
+
+---
+
+# 💡 Future Roadmap
+
+### 📄 Export Features
+
+* PDF Report Generation
+* Printable Result Sheet
+
+### 🏫 Academic Enhancements
+
+* University-specific grading systems
+* SGPA support
+* Multi-semester support
+
+### 📈 Analytics
+
+* Performance trends
+* Semester comparisons
+* Academic progress tracking
+
+### ☁️ Cloud Features
+
+* Save results
+* User profiles
+* Login system
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push to GitHub
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+### 🌙 Built with passion for students.
+
+**GRADE·NEXUS — Making CGPA Calculation Effortless.**
+
+⭐ Star the repository if you found it useful.
+
+</div>
